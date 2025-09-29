@@ -1,12 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { DynamicHostComponent } from "./simple-dynamic/dynamic-host.component";
+import { UseDialogComponent } from "./demo-components/dialog-simple/use-dialog.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [DynamicHostComponent]
+  imports: [UseDialogComponent, UseDialogComponent]
 })
 export class App {
-  title = signal('Angular Signal Starter');
 }
