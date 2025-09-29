@@ -3,22 +3,14 @@ import {
   effect,
   inject,
   OnDestroy,
-  OnInit,
   output,
   signal,
-  TemplateRef,
   viewChild,
 } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
 import {
   CdkPortal,
-  CdkPortalOutlet,
-  Portal,
   PortalModule,
 } from '@angular/cdk/portal';
-import { AsyncPipe } from '@angular/common';
-import { Observable } from 'rxjs';
 import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 
 @Component({
