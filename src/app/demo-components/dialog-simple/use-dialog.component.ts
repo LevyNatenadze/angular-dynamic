@@ -1,27 +1,27 @@
 import { Component } from '@angular/core';
-import { BaseDialogComponent } from '../../core/dialog-simple/base-dialog.component';
 import { DialogContentComponent } from './dialog-content.component';
+import { DialogSimpleComponent } from "../../core/dialog-simple/dialog-simple.component";
 
 @Component({
-    selector: 'use-dialog',
+    selector: 'use-dialog-simple',
     template: `
         <div>
             <h2>Child</h2>
             <button (click)="openModal()">Open Modal</button>
         </div>
         @if (isModalOpen) {
-            <base-dialog (closeModal)="closeModal()">
+            <simple-dialog (closeModal)="closeModal()">
                 <ng-container modal-header>The Modal Header</ng-container>
                 <ng-container modal-body>
                     <dialog-content />
                 </ng-container>
-            </base-dialog>
+            </simple-dialog>
         }
     `,
-    imports: [BaseDialogComponent, DialogContentComponent]
+    imports: [DialogContentComponent, DialogSimpleComponent]
 })
 
-export class UseDialogComponent {
+export class UseDialogSimpleComponent {
     isModalOpen = false;
 
     openModal(): void {

@@ -14,11 +14,11 @@ import {
 import { Overlay, OverlayConfig } from '@angular/cdk/overlay';
 
 @Component({
-  selector: 'base-dialog',
-  templateUrl: 'base-dialog.component.html',
+  selector: 'simple-dialog',
+  templateUrl: './dialog-simple.component.html',
   imports: [PortalModule],
 })
-export class BaseDialogComponent implements OnDestroy {
+export class DialogSimpleComponent implements OnDestroy {
   private readonly overlay = inject(Overlay);
   portal = viewChild(CdkPortal);
   closeModal = output<void>();
